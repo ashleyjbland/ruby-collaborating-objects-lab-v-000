@@ -14,8 +14,8 @@ class Song
   end
 
   def artist_name=(name)
-    @artist = Artist.find_or_create_by_name(name)
-    @artist.add_song(self)
+    artist = Artist.find_or_create_by_name(name)
+    artist.add_song(self)
     #artist.name = artist
     @artist
   end
